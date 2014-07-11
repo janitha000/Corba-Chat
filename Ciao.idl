@@ -1,0 +1,8 @@
+module CiaoApp {
+   interface CiaoCallback {
+      void callback(in string message);
+   };
+   interface Ciao {
+      string say(in CiaoCallback objref, in string message);
+   };
+};
