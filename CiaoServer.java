@@ -13,10 +13,12 @@ class CiaoServant extends CiaoPOA
         orb = orb_val;
     }
 
-    public String say(CiaoCallback callobj, String msg)
+    public String say(CiaoCallback callobj, String id,String msg)
     {
-        callobj.callback(msg+"hki");
-        return "\n Ciao Mondo!! \n";
+        callobj.callback(id+": "+msg);
+		String msgToPrint= id+": "+msg;
+		return msgToPrint;
+        //return "\n Ciao Mondo!! \n";
     }
 }
 

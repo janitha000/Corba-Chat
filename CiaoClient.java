@@ -4,6 +4,8 @@ import org.omg.CosNaming.NamingContextPackage.*;
 import org.omg.CORBA.*;     // All CORBA applications need these classes.
 import org.omg.PortableServer.*;   
 import org.omg.PortableServer.POA;
+import java.util.Scanner;
+
 
  
 class CiaoCallbackServant extends CiaoCallbackPOA
@@ -43,8 +45,13 @@ public class CiaoClient
 
 	    org.omg.CORBA.Object ref = rootpoa.servant_to_reference(ciaoCallbackImpl);
 	    CiaoCallback cref = CiaoCallbackHelper.narrow(ref);
+		
+		Scanner in = new Scanner(System.in);
+ 
+		System.out.println("Enter a string");
+		String msg = in.nextLine();
 
-	    String ciao = ciaoImpl.say(cref, "\n Buongiorno \n");
+	    String ciao = ciaoImpl.say(cref, "Janitha",msg);
 	    System.out.println(ciao);
 
 	} catch(Exception e){
