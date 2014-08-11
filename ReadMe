@@ -1,0 +1,9 @@
+idlj -fall  Ciao.idl
+
+javac *.java CiaoApp/*.java
+ 
+start orbd -ORBInitialPort 1050
+
+start java CiaoServer -ORBInitialPort 1050 -ORBInitialHost localhost
+
+java CiaoClient -ORBInitialPort 1050 -ORBInitialHost localhost
