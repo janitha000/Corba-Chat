@@ -47,12 +47,17 @@ public class CiaoClient
 	    CiaoCallback cref = CiaoCallbackHelper.narrow(ref);
 		
 		Scanner in = new Scanner(System.in);
- 
-		System.out.println("Enter a string");
+		System.out.print("Enter your UserName: ");
+		String id = in.nextLine();
+        boolean exit=false;
+		while(!exit){
+		System.out.print(id+ ": ");
 		String msg = in.nextLine();
 
-	    String ciao = ciaoImpl.say(cref, "Janitha",msg);
+	    String ciao = ciaoImpl.say(cref,id,msg);
 	    System.out.println(ciao);
+		
+		}
 
 	} catch(Exception e){
 	    System.out.println("ERROR : " + e);

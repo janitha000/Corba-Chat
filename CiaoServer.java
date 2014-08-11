@@ -15,7 +15,7 @@ class CiaoServant extends CiaoPOA
 
     public String say(CiaoCallback callobj, String id,String msg)
     {
-        callobj.callback(id+": "+msg);
+        //callobj.callback(id+": "+msg);
 		String msgToPrint= id+": "+msg;
 		return msgToPrint;
         //return "\n Ciao Mondo!! \n";
