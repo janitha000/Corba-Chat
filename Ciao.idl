@@ -3,6 +3,11 @@ module CiaoApp {
       void callback(in string message);
    };
    interface Ciao {
-      string say(in CiaoCallback objref,in string id, in string message);
+      string say(in string id, in string message);
+	  void register(in CiaoCallback callobj);
+	 
+	  
    };
+   
+   
 };
