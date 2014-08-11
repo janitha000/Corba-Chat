@@ -55,7 +55,7 @@ public class CiaoClient
 		String msg = in.nextLine();
 
 	    String ciao = ciaoImpl.say(cref,id,msg);
-	    System.out.println(ciao);
+	    //System.out.println(ciao);
 		
 		}
 
