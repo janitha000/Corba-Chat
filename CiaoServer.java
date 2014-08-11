@@ -35,10 +35,10 @@ class CiaoServant extends CiaoPOA {
 				System.out.println(id);
 
         obj.callback(id + ": " + msg);
-         msgToPrint = id + ": " + msg;
+        //msgToPrint = id + ": " + msg;
 		}
 		return "YEEEPPEEEE";
-        //return "\n Ciao Mondo!! \n";
+        
     }
 }
 
