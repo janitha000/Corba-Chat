@@ -53,6 +53,10 @@ public class CiaoClient
 		while(!exit){
 		System.out.print(id+ ": ");
 		String msg = in.nextLine();
+		if(msg.equals("exit")){
+		 exit=true;
+		 break;
+		 }
 
 	    String ciao = ciaoImpl.say(cref,id,msg);
 	    //System.out.println(ciao);
