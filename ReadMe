@@ -1,9 +1,14 @@
+Compile the IDL:
 idlj -fall  Ciao.idl
 
+Compile all java source codes
 javac *.java CiaoApp/*.java
- 
+
+Start Object request broker 
 start orbd -ORBInitialPort 1050
 
+Start created server program (CiaoServer.class)
 start java CiaoServer -ORBInitialPort 1050 -ORBInitialHost localhost
 
+Start created client program (CiaoClient.class)
 java CiaoClient -ORBInitialPort 1050 -ORBInitialHost localhost
